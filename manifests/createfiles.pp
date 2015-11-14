@@ -1,4 +1,4 @@
-class createfiles
+class mysite16::createfiles
 {
   file { '/var/www/index.php':
     ensure  => 'present',

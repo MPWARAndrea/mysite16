@@ -55,5 +55,5 @@ class mysite16
   }
 
   # Create files
-  class {'createfiles':}
+  include mysite16::createfiles
 }

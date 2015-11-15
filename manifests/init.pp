@@ -17,6 +17,8 @@ class mysite16
     'libssh2','libssh2-devel','gcc','gcc-c++','autoconf','automake','postgresql-libs'
   ]
 
+  package { $misc_packages: ensure => latest }
+
   # PHP
   include ::yum::repo::remi
   package { 'libzip-last':

@@ -39,10 +39,12 @@ class mysite16
   class{ 'apache': }
 
   apache::vhost { 'centos.dev':
+    port    => '80',
     docroot       => '/var/www',
   }
 
   apache::vhost { 'project1.dev':
+    port    => '80',
     docroot       => '/var/www/project1',
   }
 
@@ -92,7 +94,7 @@ class mysite16
       group   => "root",
       mode    => 600,
       replace => true,
-      source  => "puppet:///modules/iptables/iptables.txt",
+      source  => "puppet:///modules/mysite16/iptables.txt",
     }
     service { 'iptables':
       ensure     => running,

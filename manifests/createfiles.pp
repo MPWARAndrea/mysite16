@@ -2,7 +2,7 @@ class mysite16::createfiles
 {
   file { '/var/www/index.php':
     ensure  => 'present',
-    content => "puppet:///modules/mysite16/index_base.php",
+    source  => "puppet:///modules/mysite16/index_base.php",
     mode    => '0644',
   }
 

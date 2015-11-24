@@ -48,6 +48,8 @@ class mysite16
     docroot       => '/var/www/project1',
   }
 
+  include apache::mod::php
+
   # MYSQL
   class { '::mysql::server':
     root_password    => 'vagrantpass',
